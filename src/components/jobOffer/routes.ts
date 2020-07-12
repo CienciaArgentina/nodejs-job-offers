@@ -4,7 +4,7 @@ import { HttpStatusCode } from '../../commons/constants';
 
 export default [
   {
-    path: '/gender/:id',
+    path: '/job-offer/:id',
     method: 'get',
     handler: [
       async (req: Request, res: Response): Promise<void> => {

@@ -1,7 +1,7 @@
 export enum TableNames {
-  Gender = 'Genders',
+  JobOffer = 'JobOffer',
 }
 
 export enum EntityNames {
-  Gender = 'gender',
+  JobOffer = 'jobOffer',
 }
