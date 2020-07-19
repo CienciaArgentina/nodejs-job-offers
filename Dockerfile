@@ -8,7 +8,7 @@ COPY ./src ./src
 
 #Set packages repository
 ARG registryGithub
-RUN npm config set registry "$registryGithub"
+RUN npm config set registry $registryGithub
 
 RUN npm install
 RUN npm run build
