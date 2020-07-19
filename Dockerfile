@@ -7,7 +7,9 @@ COPY tsconfig*.json ./
 COPY ./src ./src
 
 #Set packages repository
+ARG github_PAT
 ARG registryGithub
+RUN npm login --registry=https://npm.pkg.github.com --scope=@gabmetal -p $github_PAT
 RUN npm config set registry $registryGithub
 
 RUN npm install
