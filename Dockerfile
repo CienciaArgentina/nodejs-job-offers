@@ -14,7 +14,7 @@ ARG GITHUB_EMAIL
 
 RUN npm install -g npm-cli-login
 RUN npm-cli-login -u $GITHUB_USER -p $GITHUB_TOKEN -e $GITHUB_EMAIL -r $registryGithub -s @CienciaArgentina
-RUN npm config set registry $registryGithub/CienciaArgentina
+RUN npm config set registry $registryGithub
 
 RUN npm install
 RUN npm run build
