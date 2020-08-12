@@ -20,6 +20,9 @@ export default class JobOffer extends Model {
   requirements_optionals!: string
   //
   project_id!: number
+  //
+  organization!: object
+  organization_id!: number
 
   static tableName = TableNames.JobOffer;
 
