@@ -18,5 +18,5 @@ export interface JobOfferDto {
 	//
 	project_id: number
 	//
-	organization: object
+	project: object
 }

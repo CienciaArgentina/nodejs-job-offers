@@ -11,8 +11,8 @@ export const getById = async (id: string): Promise<JobOfferDto> => {
   if (isNullOrUndefined(jobOffer)) throw new HTTP404Error();
   const host = process.env.CIENCIA_API_HOST || ''
   const request = httpClient(host)
-  const response = await request.get(`/organizations/${jobOffer.organization_id}`)
-  jobOffer.organization = response
+  const response = await request.get(`/projects/${jobOffer.project_id}`)
+  jobOffer.project = response
   return mapperJobOffer(jobOffer);
 };
 

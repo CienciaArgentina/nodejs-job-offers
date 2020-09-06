@@ -1,5 +1,5 @@
 export enum TableNames {
-  JobOffer = 'JobOffer',
+  JobOffer = 'joboffer',
 }
 
 export enum EntityNames {
