@@ -1,4 +1,4 @@
-import { HttpStatusErrorCode, ErrorCode } from './src/commons/constants';
+import { HttpStatusErrorCode, ErrorCode } from '../commons/constants';
 export abstract class HTTPClientError extends Error {
   readonly statusCode!: HttpStatusErrorCode;
   readonly name!: string;

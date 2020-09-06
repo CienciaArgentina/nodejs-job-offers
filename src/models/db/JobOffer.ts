@@ -1,4 +1,4 @@
-import { TableNames } from '../commons/constants';
+import { TableNames } from '../../commons/constants';
 import { Model } from 'objection';
 
 export default class JobOffer extends Model {
