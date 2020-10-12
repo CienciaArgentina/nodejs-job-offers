@@ -14,7 +14,7 @@ export default class JobOffer extends Model {
   presentation_letter!: boolean
   //
   career_state!: number
-  lab_experience!: string
+  lab_experience!: number
   end_career_date_estimated!: string
   requirements_summary!: string
   requirements_optionals!: string

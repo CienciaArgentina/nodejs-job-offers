@@ -1,9 +1,20 @@
 import JobOffer from '../../../models/db/JobOffer'
-import { JobOfferDto } from './models'
+import { CreateJobOfferDTO, JobOfferDTO } from './models'
 
-export const mapperJobOffer = (jobOffer: JobOffer):JobOfferDto => {
-	const dto:JobOfferDto = {
+export const mapperJobOfferDTO = (jobOffer: JobOffer):JobOfferDTO => {
+	const dto:JobOfferDTO = {
 		...jobOffer
 	}
 	return dto
+}
+
+export const mapperCreateFromJobOfferDTO = (jobOfferProps: CreateJobOfferDTO):JobOffer => {
+	let jobOffer: JobOffer = Object.assign(
+		new JobOffer(),
+		{
+			is_open: 0,
+			...jobOfferProps
+		}
+	)
+	return jobOffer
 }
