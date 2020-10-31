@@ -14,15 +14,14 @@ export default class JobOffer extends Model {
   presentation_letter!: boolean
   //
   career_state!: number
-  lab_experience!: string
+  lab_experience!: number
   end_career_date_estimated!: string
   requirements_summary!: string
   requirements_optionals!: string
   //
   project_id!: number
   //
-  organization!: object
-  organization_id!: number
+  project!: object
 
   static tableName = TableNames.JobOffer;
 
@@ -77,6 +76,7 @@ export default class JobOffer extends Model {
         ref('lab_experience'),
         ref('requirements_summary'),
         ref('requirements_optionals'),
+        ref('project_id'),
       )
     }
   }
